@@ -1,0 +1,84 @@
+{% extends 'master.html' %}
+
+{% block title %}
+    Edit fudbaler
+{% endblock %}
+
+{% block content %}
+
+     <form method="post" action="{% url 'edit' id %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="{{ form.title.id_for_label }}">{{ form.ime.label_tag }}</label>
+            <input type="text" class="form-control" id="{{ form.title.id_for_label }}" name="{{ form.ime.name }}" value="{{ form.ime.value }}">
+            {% if form.title.errors %}
+                <div class="alert alert-danger">
+                    <ul style="text-align: left">
+                        {% for error in form.title.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.content.id_for_label }}">{{ form.prezime.label_tag }}</label>
+            <input type="text" class="form-control" id="{{ form.content.id_for_label }}" name="{{ form.prezime.name }}" value="{{ form.prezime.value }}">
+            {% if form.content.errors %}
+                <div class="alert alert-danger">
+                    <ul style="text-align: left">
+                        {% for error in form.content.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+
+         <div class="form-group">
+            <label for="{{ form.godine.id_for_label }}">{{ form.godine.label_tag }}</label>
+            <input type="text" class="form-control" id="{{ form.godine.id_for_label }}" name="{{ form.godine.name }}" value="{{ form.godine.value }}">
+            {% if form.content.errors %}
+                <div class="alert alert-danger">
+                    <ul style="text-align: left">
+                        {% for error in form.content.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+
+         <div class="form-group">
+            <label for="{{ form.brojNaDresu.id_for_label }}">{{ form.brojNaDresu.label_tag }}</label>
+            <input type="text" class="form-control" id="{{ form.brojNaDresu.id_for_label }}" name="{{ form.brojNaDresu.name }}" value="{{ form.brojNaDresu.value }}">
+            {% if form.content.errors %}
+                <div class="alert alert-danger">
+                    <ul style="text-align: left">
+                        {% for error in form.content.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+
+         <div class="form-group">
+            <label for="{{ form.tim.id_for_label }}">{{ form.tim.label_tag }}</label>
+            <input type="text" class="form-control" id="{{ form.tim.id_for_label }}" name="{{ form.tim.name }}" value="{{ form.tim.value }}">
+            {% if form.content.errors %}
+                <div class="alert alert-danger">
+                    <ul style="text-align: left">
+                        {% for error in form.content.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </div>
+
+        <input type="submit" class="btn btn-primary btn-lg" value="Save"/>
+    </form>
+
+{% endblock %}

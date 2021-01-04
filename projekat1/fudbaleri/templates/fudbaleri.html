@@ -1,0 +1,15 @@
+{%  extends 'master.html' %}
+
+{% block ime %}
+    fudbaleri
+{% endblock %}
+
+{%  block content %}
+    <div class="list-group">
+        {% for fudbaler in fudbaleri %}
+            <a class="list-group-item list-group-item-action" href="{% url 'fudbaler' fudbaler.id %}">
+                {{ fudbaler.ime }}
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}
