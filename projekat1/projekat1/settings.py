@@ -85,7 +85,7 @@ DATABASES = {
         'PORT': '3306'
     }
 }
-LOGIN_REDIRECT_URL = '/articles'
+LOGIN_REDIRECT_URL = '/fudbaleri'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

@@ -87,3 +87,16 @@ def registration(req):
     return render(req, 'registration.html', {'form': form})
 
 
+def delete(req, pk):
+    fudbaler = Fudbaler.objects.get(id=pk)
+    if req.method == "POST":
+        fudbaler.delete()
+        return redirect('fudbaleri')
+
+    context = {'item': fudbaler}
+    return render(req, 'delete.html', context)
+
+
+
+
+
