@@ -38,7 +38,7 @@
 
          <div class="form-group">
             <label for="{{ form.godine.id_for_label }}">{{ form.godine.label_tag }}</label>
-            <input type="text" class="form-control" id="{{ form.godine.id_for_label }}" name="{{ form.godine.name }}" value="{{ form.godine.value }}">
+            <input type="number" max="45" class="form-control" id="{{ form.godine.id_for_label }}" name="{{ form.godine.name }}" value="{{ form.godine.value }}">
             {% if form.content.errors %}
                 <div class="alert alert-danger">
                     <ul style="text-align: left">
@@ -52,7 +52,7 @@
 
          <div class="form-group">
             <label for="{{ form.brojNaDresu.id_for_label }}">{{ form.brojNaDresu.label_tag }}</label>
-            <input type="text" class="form-control" id="{{ form.brojNaDresu.id_for_label }}" name="{{ form.brojNaDresu.name }}" value="{{ form.brojNaDresu.value }}">
+            <input type="number" max="99" class="form-control" id="{{ form.brojNaDresu.id_for_label }}" name="{{ form.brojNaDresu.name }}" value="{{ form.brojNaDresu.value }}">
             {% if form.content.errors %}
                 <div class="alert alert-danger">
                     <ul style="text-align: left">

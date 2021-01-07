@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Fudbaler(models.Model):
     ime = models.CharField(max_length=30)
     prezime = models.CharField(max_length=30)
-    godine = models.IntegerField(default=30)
+    godine = models.IntegerField(max_length=45)
     brojNaDresu = models.IntegerField(max_length=99)
     tim = models.CharField(max_length=30)
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
